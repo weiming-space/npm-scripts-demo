@@ -1,0 +1,40 @@
+{
+  "name": "npm-scripts-demo",
+  "version": "1.0.0",
+  "description": "npm scripts总结",
+  "config": {
+      "port": 3000
+  },
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "clean1": "rm -rf clean/*",
+    "clean2": "rm -rf clean/*.js",
+    "clean2": "rm -rf clean/a.*",
+    "cleanAll1": "rm -rf clean/**",
+    "cleanAll2": "rm -rf clean/**/",
+
+    "script1": "node src/script1.js",
+    "script2": "node src/script2.js",
+    "sync": "npm run script1 & npm run script2",
+    "async": "npm run script1 && npm run script2",
+
+
+    "start": "echo start",
+    "stop": "echo stop",
+    "restart": "echo restart",
+
+    "prebuild": "echo before build",
+    "build": "echo build",
+    "postbuild": "echo build after",
+
+    "setConfigPort": "npm config set port 3000",
+    "delConfigPort": "npm config delete port",
+    "setConfigProgramPort": "npm config set npm-scripts-demo:port 4000",
+    "delConfigProgramPort": "npm config delete npm-scripts-demo:port",
+    "view": "node src/view.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
